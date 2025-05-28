@@ -1,84 +1,215 @@
-body {
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: #1f2937;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
 }
 
+/* Header Styles */
 .header {
-    background-color: #1f2937;
-    color: #f9faf8;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 0 15%;
+}
+
+.nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #E5E7EB;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    gap: 50px;
+}
+
+.hero-text {
     flex: 1;
 }
 
-.content {
-    background-color: #1f2937;
-    color: #f9faf8;
+.hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+    margin-bottom: 10px;
+    line-height: 1.1;
 }
 
-.quote {
-    background-color: #1f2937;
-    color: #f9faf8;
+.hero p {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin-bottom: 20px;
 }
 
-.signup {
-    background-color: #1f2937;
-    color: #f9faf8;
-}
-
-.footer {
-    background-color: #1f2937;
-    color: #f9faf8;
-}
-
-.header-logo {
-    width: 100px;
-    height: 100px;
-}
-
-.header-logo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.header-description {
+.hero-image {
+    flex: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-.header-image img {
-    width: 500px;
-    height: 300px;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Info Section */
+.info {
+    padding: 50px 20%;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 170px;
+}
+
+.box {
+    width: 160px;
+    height: 160px;
+    border: 4px solid #3882F6;
+    border-radius: 15px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.header-links {
-    display: flex;
-    gap: 10px;
+.card p {
+    color: #6D747D;
+    font-size: 18px;
 }
 
-.content-images {
-    display: flex;
-    gap: 10px;
+/* Quote Section */
+.quote-section {
+    background-color: #E5E7EB;
+    padding: 100px 20%;
 }
 
-.content-images img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.quote-text {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1F2937;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.quote-author {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: #1F2937;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 15%;
+}
+
+.cta-container {
+    background-color: #3882F6;
+    border-radius: 10px;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-text h3 {
+    color: #F9FAF8;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.cta-text p {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+.cta-button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: 2px solid #F9FAF8;
+    border-radius: 8px;
+    padding: 8px 35px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.hero .cta-button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    padding: 8px 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #1F2937;
+    color: #E5E7EB;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 18px;
 }
